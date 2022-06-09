@@ -1,4 +1,3 @@
-import org.jcp.xml.dsig.internal.SignerOutputStream;
 
 public class preorder {
     static class Node{
@@ -30,20 +29,20 @@ public class preorder {
     }
 
     //preorder(R0,L,R)
-    static void preorder(Node root){
+    static void preorderr(Node root){
         if(root==null){
             return;
         }
         System.out.print(root.data);
-        preorder(root.left);
-        preorder(root.right);
+        preorderr(root.left);
+        preorderr(root.right);
     }
     public static void main(String[] args) {
         int[] nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         binarytree bt=new binarytree();
         Node root=bt.fun(nodes);
        // System.out.println(root.data);
-       preorder(root);
+       preorderr(root);
     }
     
 }
